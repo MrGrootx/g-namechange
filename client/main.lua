@@ -43,7 +43,7 @@ Citizen.CreateThread(function()
                if input then
                   local fName = input[1]
                   local lName = input[2]
-                  print(json.encode(input, { indent = true }))
+                  -- print(json.encode(input, { indent = true }))
                   TriggerServerEvent('mg_namechange:event', fName, lName)
                end
             end

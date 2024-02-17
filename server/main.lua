@@ -33,7 +33,7 @@ AddEventHandler('mg_namechange:event', function(fName, lName)
           xPlayer.name .. '\n' ..
           '**Identifier:** ```' ..
           xPlayer.identifier .. '```' .. '\n **New Names ``🐱``**' .. '\n**FirstName** : ' .. fName .. "\n" ..
-          '**LastName** : ' .. ' ' .. fName
+          '**LastName** : ' .. ' ' .. lName
       DiscordLog(16753920, 'Someone changed their names', dmsg)
    end
 end)
