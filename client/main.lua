@@ -21,8 +21,7 @@ Citizen.CreateThread(function()
                      placeholder = 'Enter Your FirstName',
                      icon = 'fa-solid fa-note-sticky',
                      required = true,
-                     -- default = "ex: justgroot",
-                     default = "firstname",
+                     default = "ex: justgroot",
                      min = 2,
                      max = 16,
                   }, {
@@ -31,7 +30,6 @@ Citizen.CreateThread(function()
                   placeholder = 'Enter Your LastName',
                   icon = 'fa-solid fa-note-sticky',
                   required = true,
-                  default = "lastname",
                   min = 2,
                   max = 16,
                },

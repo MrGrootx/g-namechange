@@ -34,11 +34,11 @@ AddEventHandler('mg_namechange:event', function(fName, lName)
           '**Identifier:** ```' ..
           xPlayer.identifier .. '```' .. '\n **New Names ``🐱``**' .. '\n**FirstName** : ' .. fName .. "\n" ..
           '**LastName** : ' .. ' ' .. fName
-      DiscordLog(16753920, 'someone changed their names', dmsg)
+      DiscordLog(16753920, 'Someone changed their names', dmsg)
    end
 end)
 
-
+-- Discord webhook function
 function DiscordLog(color, title, message)
    local Embed = {
       {
@@ -50,6 +50,8 @@ function DiscordLog(color, title, message)
    PerformHttpRequest(Config.Discord.webhookURL, function(err, text, headers) end, 'POST',
       json.encode({ username = 'Groot Development', embeds = Embed }), { ['Content-Type'] = 'application/json' })
 end
+
+-- Notification Function
 
 function Notification(title, desc, type, position, duration)
    TriggerClientEvent('ox_lib:notify', source, {
