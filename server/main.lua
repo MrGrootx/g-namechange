@@ -24,6 +24,39 @@ AddEventHandler('mg_namechange:event', function(fName, lName)
          }
 
       )
+      -- Notification
       Notification(nil, 'Your names has been Changed, Please restart your game', 'success', 'top', 5000)
+
+      -- Webhook
+      local dmsg =
+          '**Old Name:** ' ..
+          xPlayer.name .. '\n' ..
+          '**Identifier:** ```' ..
+          xPlayer.identifier .. '```' .. '\n **New Names ``🐱``**' .. '\n**FirstName** : ' .. fName .. "\n" ..
+          '**LastName** : ' .. ' ' .. fName
+      DiscordLog(16753920, 'someone changed their names', dmsg)
    end
 end)
+
+
+function DiscordLog(color, title, message)
+   local Embed = {
+      {
+         ['color'] = color,
+         ['title'] = "**" .. title .. "**",
+         ['description'] = message,
+      }
+   }
+   PerformHttpRequest(Config.Discord.webhookURL, function(err, text, headers) end, 'POST',
+      json.encode({ username = 'Groot Development', embeds = Embed }), { ['Content-Type'] = 'application/json' })
+end
+
+function Notification(title, desc, type, position, duration)
+   TriggerClientEvent('ox_lib:notify', source, {
+      title = title,
+      description = desc,
+      type = type,
+      position = position,
+      duration = duration
+   })
+end
