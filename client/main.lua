@@ -21,7 +21,8 @@ Citizen.CreateThread(function()
                      placeholder = 'Enter Your FirstName',
                      icon = 'fa-solid fa-note-sticky',
                      required = true,
-                     default = "ex: justgroot",
+                     -- default = "ex: justgroot",
+                     default = "firstname",
                      min = 2,
                      max = 16,
                   }, {
@@ -30,6 +31,7 @@ Citizen.CreateThread(function()
                   placeholder = 'Enter Your LastName',
                   icon = 'fa-solid fa-note-sticky',
                   required = true,
+                  default = "lastname",
                   min = 2,
                   max = 16,
                },
@@ -44,7 +46,7 @@ Citizen.CreateThread(function()
                   local fName = input[1]
                   local lName = input[2]
                   print(json.encode(input, { indent = true }))
-                  
+                  TriggerServerEvent('mg_namechange:event', fName, lName)
                end
             end
          }

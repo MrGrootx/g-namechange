@@ -13,6 +13,7 @@ shared_scripts { '@es_extended/imports.lua', '@ox_lib/init.lua' }
 
 server_scripts {
    '@es_extended/locale.lua',
+   '@mysql-async/lib/MySQL.lua',
    'shared/Config.lua',
    'server/*.lua'
 }
