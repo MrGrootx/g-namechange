@@ -24,6 +24,6 @@ AddEventHandler('mg_namechange:event', function(fName, lName)
          }
 
       )
-      print('First name has been changed')
+      Notification(nil, 'Your names has been Changed, Please restart your game', 'success', 'top', 5000)
    end
 end)
