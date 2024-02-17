@@ -1,6 +1,6 @@
 #### Simple Esx Player name change script in game with Discord log
 
-Dependency: 
+Requirements: 
 - [ox_lib](https://github.com/overextended/ox_lib)
 - [es_extended](https://github.com/esx-framework)
 

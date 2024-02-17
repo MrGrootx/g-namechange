@@ -2,7 +2,7 @@ fx_version 'adamant'
 
 game 'gta5'
 
-description 'namechange'
+description 'a simple name change script'
 
 version '1.0'
 
